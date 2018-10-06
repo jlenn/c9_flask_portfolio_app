@@ -38,7 +38,8 @@ def add_numbers_post():
 def subtract_numbers_post():
 	# --> ['5', '6', '8']
 	# print(type(request.form['text']))
-	return render_template('subtract_numbers.html')
+	if request.method == 'GET':
+		return render_template('subtract_numbers.html')
 	
 	  
 
