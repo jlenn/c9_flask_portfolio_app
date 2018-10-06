@@ -41,6 +41,7 @@ def subtract_numbers_post():
 	if request.method == 'GET':
 		return render_template('subtract_numbers.html')
 	elif request.method == 'POST':
+		print(request.form['text'].split())
 		total = 0
 		return render_template('subtract_numbers.html', result=str(total))	  
 
