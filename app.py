@@ -41,7 +41,7 @@ def subtract_numbers_post():
 	  if request.method == 'GET':
 	  	return render_template('subtract_numbers.html')
 	  elif request.method == 'POST':		
-		return "Easy now! Let's keep it simple! 2 or more numbers with a space between them please"		  
+		return render_template('subtract_numbers.html')		  
 
 @app.route('/shopping_list', methods=['GET','POST'])
 def shopping_list_post():
