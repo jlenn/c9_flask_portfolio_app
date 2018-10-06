@@ -40,8 +40,9 @@ def subtract_numbers_post():
 	# print(type(request.form['text']))
 	if request.method == 'GET':
 		return render_template('subtract_numbers.html')
-	
-	  
+	elif request.method == 'POST':
+		total = 0
+		return render_template('subtract_numbers.html', result=str(total)	  
 
 @app.route('/shopping_list', methods=['GET','POST'])
 def shopping_list_post():
