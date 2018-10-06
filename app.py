@@ -36,12 +36,11 @@ def add_numbers_post():
 
 @app.route('/subtract_numbers', methods=['GET','POST'])
 def subtract_numbers_post():
-	  # --> ['5', '6', '8']
-	  # print(type(request.form['text']))
-	  if request.method == 'GET':
-	  	return render_template('subtract_numbers.html')
-	  elif request.method == 'POST':		
-		return render_template('subtract_numbers.html')		  
+	# --> ['5', '6', '8']
+	# print(type(request.form['text']))
+	return render_template('subtract_numbers.html')
+	
+	  
 
 @app.route('/shopping_list', methods=['GET','POST'])
 def shopping_list_post():
