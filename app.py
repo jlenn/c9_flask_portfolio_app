@@ -48,7 +48,7 @@ def subtract_numbers_post():
   	      		total -= int(str_num)
   	      	return render_template('subtract_numbers.html', result=str(total))
   	      except ValueError:
-return "Easy now! Let's keep it simple! 2 numbers with a space between them please"
+		return "Easy now! Let's keep it simple! 2 numbers with a space between them please"
 
 @app.route('/shopping_list', methods=['GET','POST'])
 def shopping_list_post():
