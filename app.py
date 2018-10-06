@@ -43,7 +43,12 @@ def subtract_numbers_post():
 	elif request.method == 'POST':
 		print(request.form['text'].split())
 		total = 0
-		return render_template('subtract_numbers.html', result=str(total))	  
+		try:
+			for str_num in request.form['text'].split():
+				total -= int(str_num)			
+			return render_template('subtract_numbers.html', result=str(total))
+		except ValueError:
+			return "Easy now! Let's keep it simple! 2 or more numbers with a space between them please"
 
 @app.route('/shopping_list', methods=['GET','POST'])
 def shopping_list_post():
