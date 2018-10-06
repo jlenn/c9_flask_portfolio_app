@@ -34,7 +34,9 @@ def add_numbers_post():
   	      except ValueError:
   	      	return "Easy now! Let's keep it simple! 2 numbers with a space between them please"
 
-
+@app.route('/subtract_numbers', methods=['GET','POST'])
+def subtract_numbers_post():
+	return render_template('subtract_numbers.html')
 
 @app.route('/shopping_list', methods=['GET','POST'])
 def shopping_list_post():
