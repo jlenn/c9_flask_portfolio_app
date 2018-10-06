@@ -35,7 +35,7 @@ def add_numbers_post():
   	      	return "Easy now! Let's keep it simple! 2 numbers with a space between them please"
 	
 @app.route('/subtract_numbers', methods=['GET','POST'])
-def add_numbers_post():
+def subract_numbers_post():
 	  # --> ['5', '6', '8']
 	  # print(type(request.form['text']))
 	  if request.method == 'GET':
